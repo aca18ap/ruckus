@@ -1,4 +1,32 @@
 <div class="container-fluid">
-<h1>Welcome to ruckus</h1>
+    <div id="logo-bar" class="d-flex flex-column w-100">
+        <div class="align-self-center z-100" id="z">
+            <a class="navbar-brand" href='/'>
+                <img src="ruckus_logo.png" width="250" height="250" alt="">
+            </a>
+        </div>
+        <div id="bar" class="d-flex justify-content-between">
+            <%= link_to 'Products', products_path, :class => 'nav-links' %>
+            <%= link_to 'Users', users_path, :class => 'nav-links' %>
+            <%= link_to 'Ruckus Peak', root_path, :class => 'nav-links' %>
+            <%= link_to 'Products', products_path, :class => 'nav-links' %>
+            <%= link_to 'Users', users_path, :class => 'nav-links' %>
+        
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="align-items-center pt-5">
+                <%= image_tag ("home_page_clothes.png"), :class=>"home_page_image" %>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="d-flex h-100 justify-content-center align-middle">
+                <h1 class="align-self-center">Coming soon...</h1>
+            </div>
+        </div>
+    
+    </div>
+
 
 </div>
