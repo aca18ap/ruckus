@@ -1,0 +1,51 @@
+<%= form_with(model: product) do |f| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+        <% product.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div> 
+
+  <div class="field">
+    <%= f.label :brand %><br />
+    <%= f.text_field :brand, autofocus: true, autocomplete: "brnad" %>
+  </div> 
+
+  <div class="field">
+    <%= f.label :size %><br />
+    <%= f.text_field :size, autofocus: true, autocomplete: "size" %>
+
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_field :description, autofocus: true, autocomplete: "description" %>
+  </div> 
+
+  <div class="field">
+    <%= f.label :price %><br />
+    <%= f.text_field :price, autofocus: true, autocomplete: "price" %>
+  </div> 
+
+  <div class="field">
+    <%= f.label :color %><br />
+    <%= f.text_field :color, autofocus: true, autocomplete: "color" %>
+  </div> 
+
+  <div class="field">
+    <%= f.label :images %><br />
+    <%= f.file_field :images, multiple: true, direct_upload: true %>  
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
