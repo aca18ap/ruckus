@@ -1,32 +1,53 @@
-<div class="container-fluid">
-    <div id="logo-bar" class="d-flex flex-column w-100">
-        <div class="align-self-center z-100" id="z">
+<%= javascript_pack_tag 'welcome' =%>
+<div class="container">
+    <div id="transparent-background" class="rounded-3">
+    
+    <div class="row content-center p-5">
+        <div class="col-lg-4 col-sm-12 d-flex justify-content-end align-content-center flex-wrap ">
+            <div class="text-right">
+                <h1>About Us</h1>
+                <p class="text-right">Sheffield based outdoor clothes reseller with a focus on presitious outdoor brands such as norhface bergahus and timberland. Shoues coats trousers etc...,</p>
+            
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-12 d-flex justify-content-center align-content-center" id="z">
             <a class="navbar-brand" href='/'>
-                <img src="ruckus_logo.png" width="250" height="250" alt="">
+                <img src="ruckus_logo.png" width="250" height="250" alt="" class="shadow">
             </a>
         </div>
-        <div id="bar" class="d-flex justify-content-between">
-            <%= link_to 'Products', products_path, :class => 'nav-links' %>
-            <%= link_to 'Users', users_path, :class => 'nav-links' %>
-            <%= link_to 'Ruckus Peak', root_path, :class => 'nav-links' %>
-            <%= link_to 'Products', products_path, :class => 'nav-links' %>
-            <%= link_to 'Users', users_path, :class => 'nav-links' %>
-        
+        <div class="col-lg-4 col-sm-12 d-flex justify-content-start align-content-center flex-wrap">
+        <div>
+            <h1>Coming soon...</h1>
+            <h1 id="time">60d 30h 54m 3s</h1>
         </div>
+        </div>
+
     </div>
-    <div class="row">
-        <div class="col-lg-6">
-            <div class="align-items-center pt-5">
-                <%= image_tag ("home_page_clothes.png"), :class=>"home_page_image" %>
+    <div class="d-flex justify-content-around">
+        <%= link_to 'Sign Up', new_user_path, :class=>"btn btn-primary"%>
+    </div>
+    <!-- Slideshow container -->
+    <div class="slideshow-container w-100">
+        <% (1..5).each do |i| %>
+            <div class="mySlides flade">
+                <%= "#{i}/5"%>
+                <%= image_tag("carousel_images/clothes_#{i}.png", width: "40%") %>
             </div>
-        </div>
-        <div class="col-lg-6">
-            <div class="d-flex h-100 justify-content-center align-middle">
-                <h1 class="align-self-center">Coming soon...</h1>
-            </div>
-        </div>
-    
+        <% end %>
+        <a onclick="plusSlides(-1)" class="prev">&#10094;</a>
+        <a onclick="plusSlides(1)" class="next">&#10095;</a>
     </div>
 
+    <div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+</div>
 
 </div>
+
+
+
+
