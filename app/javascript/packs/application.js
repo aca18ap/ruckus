@@ -5,14 +5,17 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "../stylesheets/application"
-import 'bootstrap/dist/js/bootstrap'
-import 'bootstrap/dist/css/bootstrap'
+import 'bootstrap'
+document.addEventListener("turbolinks:load", () => {
+ $('[data-toggle="tooltip"]').tooltip()   
+})
 require("stylesheets/application.scss")
 
 Rails.start()
