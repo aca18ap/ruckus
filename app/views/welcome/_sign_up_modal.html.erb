@@ -4,9 +4,12 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
     <div class="modal-body">
-        <p>Write here your email and we'll keep you updated with our progress! We can't wait to be in touch :)</p>
-        <label>Email</label>
-    <input placeholder="Email">
+        <%= form_for @subscriber do |f| %>
+            <%= f.text_field :name, placeholder: 'Name' %>
+            <%= f.email_field :email, placeholder: 'Email' %>
+            <%= f.select :source, ['Search enginer', 'social media', 'word of mouth'] %>
+            <%= f.submit%>
+        <% end%>
 
     </div>
     <div class="modal-footer">
