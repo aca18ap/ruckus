@@ -1,53 +1,60 @@
 <%= javascript_pack_tag 'welcome' =%>
-<div class="container">
-    <div id="transparent-background" class="rounded-3">
-    
-    <div class="row content-center p-5">
-        <div class="col-lg-4 col-sm-12 d-flex justify-content-end align-content-center flex-wrap ">
-            <div class="text-right">
-                <h1>About Us</h1>
-                <p class="text-right">Sheffield based outdoor clothes reseller with a focus on presitious outdoor brands such as norhface bergahus and timberland. Shoues coats trousers etc...,</p>
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signUpModalLabel">You're almost done creating your account!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+            
             
             </div>
-        </div>
-        <div class="col-lg-4 col-sm-12 d-flex justify-content-center align-content-center" id="z">
-            <a class="navbar-brand" href='/'>
-                <img src="ruckus_logo.png" width="250" height="250" alt="" class="shadow">
-            </a>
-        </div>
-        <div class="col-lg-4 col-sm-12 d-flex justify-content-start align-content-center flex-wrap">
-        <div>
-            <h1>Coming soon...</h1>
-            <h1 id="time">60d 30h 54m 3s</h1>
-        </div>
-        </div>
-
-    </div>
-    <div class="d-flex justify-content-around">
-        <%= link_to 'Sign Up', new_user_path, :class=>"btn btn-primary"%>
-    </div>
-    <!-- Slideshow container -->
-    <div class="slideshow-container w-100">
-        <% (1..5).each do |i| %>
-            <div class="mySlides flade">
-                <%= "#{i}/5"%>
-                <%= image_tag("carousel_images/clothes_#{i}.png", width: "40%") %>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
             </div>
-        <% end %>
-        <a onclick="plusSlides(-1)" class="prev">&#10094;</a>
-        <a onclick="plusSlides(1)" class="next">&#10095;</a>
+        </div>
+    </div>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div id="logo-homepage" class="col-lg-5 p-0">
+        <span id="slogan">
+            <h1 >Quality doesn't have</h1>
+            <h1 >to be expensive</h1>
+        
+        </span>
+            <%= image_tag('walking.jpg', class: "w-100")%>
+        </div>
+        <div class="col-lg-7 p-0">
+            <img src="ruckus_logo.png" alt="" class="w-100" id="homepage_logo">
+            <div id="sign_me_up" class=" d-flex justify-content-center">
+                <div class="d-flex flex-column">
+                    <span>
+                        <p class="text-center" id="sign_me_up_caption">
+                            Exciting second hand branded clothes reselling coming to the UK
+                        </p>
+                        <p class="text-center">Coming end of 2022 ....</p>
+                    </span>
+                    
+                    <div class="d-flex justify-content-center">
+                        <input class="input" placeholder= "Email">
+                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#signUpModal">Sign me up!</button>
+                    </div>
+                
+                </div>
+            </div>
+            <div class="d-flex justify-content-around" id="logos">
+                <%= image_tag('the-north-face-logo.png', width: '10%') %>
+                <%= image_tag('berghaus.svg', width: '10%') %>
+                <%= image_tag('Adidas_Logo.svg.png', width: '10%') %>
+            </div>
+        </div>
     </div>
 
-    <div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span>
-  <span class="dot" onclick="currentSlide(2)"></span>
-  <span class="dot" onclick="currentSlide(3)"></span>
-  <span class="dot" onclick="currentSlide(4)"></span>
-  <span class="dot" onclick="currentSlide(5)"></span>
 </div>
-
-</div>
-
-
 
 
