@@ -17,6 +17,7 @@ document.addEventListener("turbolinks:load", () => {
  $('[data-toggle="tooltip"]').tooltip()   
 })
 require("stylesheets/application.scss")
+require("@fortawesome/fontawesome-free")
 
 Rails.start()
 Turbolinks.start()

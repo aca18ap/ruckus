@@ -5,4 +5,14 @@ class User < ApplicationRecord
 
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+
+  validates :email, :name, :password, :password_confirmation, presence: true
+  before_create :default_values
+
+
+
+  private 
+    def default_values
+      self.role ||= "customer"
+    end
 end

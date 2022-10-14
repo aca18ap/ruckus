@@ -2,9 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
-html {
-    overflow: hidden;
-}
+
 
 body::after {
     content: "";
@@ -63,7 +61,7 @@ body::after {
 
 
 #logo-homepage{
-    box-shadow:rgb(30, 30, 10)
+    box-shadow:rgb(30, 30, 10);
 }
 
 #slogan{
@@ -73,7 +71,7 @@ body::after {
     font-size: xx-large;
     font-family: Georgia, 'Times New Roman', Times, serif;
     padding-top: 150px;
-    padding-left: 200px;
+    padding-left: 150px;
     text-overflow: break;
 }
 
@@ -87,9 +85,9 @@ body::after {
 img#homepage_logo{
     width: 90%;
     margin-top: 0;
-    animation-delay: 1s;
+    animation-delay: 0s;
     animation-name: logoMove;
-    animation-duration: 1s;
+    animation-duration: 1.3s;
     animation-fill-mode: forwards;
 }
 
@@ -106,7 +104,7 @@ img#homepage_logo{
     opacity: 0;
     animation-delay: 3s;
 
-    animation-delay: 2s;
+    animation-delay: 1.5s;
     animation-name: sign_up_fade;
     animation-duration: 1s;
     animation-fill-mode: forwards;

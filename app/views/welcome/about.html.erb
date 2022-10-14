@@ -1,5 +1,33 @@
-<div class="container">
-    <h1>Say no to waste, re-use instead!</h1>
-
-    <h1>Only high quality products</h1>
+<%= stylesheet_pack_tag 'about' %>
+<%= javascript_pack_tag 'about.js' =%>
+<div class="d-flex align-items-start justify-content-center w-100" id="logo">
+    <img src="ruckus_logo.png" class="logo_img">
 </div>
+<div class="container-fluid g-0" id="backgrounds_container">
+        <div class="page-container" id="1">
+            <a class="scroll_up">Scroll up</a>
+            <%= image_tag('about/moon.jpg', width: '100%', class: "background_image") %>
+            <div class="content">
+            
+            </div>
+            <a class="scroll_down">Scroll Down</a>
+        </div>
+        <div class="page-container" id="2">
+            <%= image_tag('about/sunset.jpg', width: '100%', class: "background_image") %>
+        </div>
+        <div class="page-container" id="3">
+            <%= image_tag('about/neowise.jpg', width: '100%', class: "background_image") %>
+        </div>
+        <div class="page-container" id="4">
+            <%= image_tag('about/train.jpg', width: '100%', class: "background_image") %>
+        </div>
+    
+</div>
+
+<script>
+    $(".container-fluid").kendoContextMenu({
+        scrollable: {
+            distance: 2000
+        }
+    });
+</script>

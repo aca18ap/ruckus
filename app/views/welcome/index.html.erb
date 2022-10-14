@@ -1,5 +1,5 @@
 <%= javascript_pack_tag 'welcome' =%>
-<div class="container-fluid">
+<div class="container-fluid" id="welcome_page">
 <!-- Button trigger modal -->
 
 <!-- Modal -->
@@ -7,13 +7,12 @@
     <div class="row">
         <div id="logo-homepage" class="col-lg-5 p-0">
         <span id="slogan">
-            <h1 >Quality doesn't always</h1>
-            <h1 >come with price</h1>
+            <h1 >Quality doesn't have to cost</h1>
         
         </span>
             <%= image_tag('walking.jpg', class: "w-100")%>
         </div>
-        <div class="col-lg-7 p-0">
+        <div class="col-lg-7 p-0 shadow-lg">
             <ul class="nav flex-column z-100" id="nav-menu">
                 <li class="nav-item">
                     <%= link_to 'About us', about_path, :class=>'nav-link' %>
@@ -52,10 +51,13 @@
     </div>
 
     <div class="modal fade" id="signUpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
+        <div class="modal-dialog modal-dialog-centered">
            <%= render 'sign_up_modal' %>
         </div>
     </div>
 </div>
 
 
+<script>
+    document.body.style.overflow= "hidden";
+</script>
