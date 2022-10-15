@@ -18,3 +18,33 @@
         }
     }
 } */
+
+$('document').ready(function(event) {
+    let lastKnownScrollPosition = 0;
+    let ticking = false;
+    let height= screen.height;
+    let c = document.body.scrollHeight + 1000;
+    
+    let logo = document.getElementById('logo');
+    console.log(logo.style)
+    function doSomething(scrollPos) {
+        
+        let newPos = Math.floor(scrollPos + (scrollPos/(c)) * height);
+        logo.style.top = newPos + 'px';
+    }
+    
+    document.addEventListener('scroll', (e) => {
+      lastKnownScrollPosition = window.scrollY;
+    
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          doSomething(lastKnownScrollPosition);
+          ticking = false;
+        });
+    
+        ticking = true;
+      }
+    });
+
+});
+
