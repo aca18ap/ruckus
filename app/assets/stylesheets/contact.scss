@@ -1,0 +1,48 @@
+
+html, body{
+    height: 100%;
+}
+
+#contacts {
+    background-image: url('winter.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#contacts-logo{
+    position: absolute;
+    width: 33%px;
+    top: 5%;
+    left: 5%;
+}
+
+.content-wrapper-contacts{
+    height: 100%;
+}
+
+.content-body-contacts{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 60%;
+    background: white;
+    border-style: solid;
+    border: 2x;
+    padding: 30px;
+    color: black;
+    box-shadow: 15px 15px 0px 5px #AAF81C;
+    li{
+        margin: 10px 0;
+      }
+    li:hover{
+        border-bottom: #AAF81C;
+    }
+}
+
+.social-link{
+    color:black;
+    list-style: none;
+    font-weight: bold;
+}

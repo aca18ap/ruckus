@@ -6,6 +6,8 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require fontawesome/all
+//= require_tree .
 
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
@@ -18,6 +20,7 @@ document.addEventListener("turbolinks:load", () => {
 })
 require("stylesheets/application.scss")
 require("@fortawesome/fontawesome-free")
+FontAwesome.config.mutateApproach = 'sync'
 
 Rails.start()
 Turbolinks.start()
