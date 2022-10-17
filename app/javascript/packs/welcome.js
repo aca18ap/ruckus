@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(event) {
+    
+});
+
+function countdown(){
     var countDownDate = new Date("Jan 5, 2024 15:37:25").getTime();
 
     // Update the count down every 1 second
@@ -28,4 +32,4 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }, 1000);
 
     $('#signUpModal').prependTo("body");
-});
+}

@@ -1,6 +1,7 @@
 
 html, body{
     height: 100%;
+    overflow-x: hidden;
 }
 
 #contacts {
@@ -11,9 +12,12 @@ html, body{
     background-size: cover;
 }
 
-#contacts-logo{
+.logo-overlay{
     position: absolute;
     width: 33%px;
+}
+
+#contacts-logo{
     top: 5%;
     left: 5%;
 }
@@ -26,13 +30,13 @@ html, body{
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 60%;
-    background: white;
+    width: 50%;
+    background: #28F730;
     border-style: solid;
     border: 2x;
     padding: 30px;
     color: black;
-    box-shadow: 15px 15px 0px 5px #AAF81C;
+    box-shadow: 15px 15px 0px 5px #5F34F7;
     li{
         margin: 10px 0;
       }
@@ -45,4 +49,11 @@ html, body{
     color:black;
     list-style: none;
     font-weight: bold;
+    transition: all 0.1s ease-in-out 0.1s;
+}
+
+
+.social-link:hover{
+    font-size: 1.25rem;
+    transition: all 0.1s ease-in-out 0.1s;
 }

@@ -1,20 +1,20 @@
-<%= javascript_pack_tag 'about.js' =%>
+<%= javascript_pack_tag 'about.js' =%>  
 <div class="d-flex justify-content-center w-100" id="logo">
-        <a href="/"><img src="ruckus_logo.png" class="logo_img"></a>
-        <ul class="nav flex-column" id="nav-menu-logo">
-            <li class="nav-item">
-                <%= link_to 'About us', about_path, :class=>'nav-link' %>
-            </li>
-            <li class="nav-item">
-                <%= link_to 'FAQs', faq_path, :class=>'nav-link' %>
-            </li>
-            <li class="nav-item">
-                <%= link_to 'Contacts', contacts_path, :class=>'nav-link' %>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#">Products</a>
-            </li>
-        </ul>
+    <a href="/"><img src="ruckus_logo.png" class="logo_img"></a>
+    <ul class="nav flex-column" id="nav-menu-logo">
+        <li class="nav-item">
+            <%= link_to 'About us', about_path, :class=>'nav-link' %>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'FAQs', faq_path, :class=>'nav-link' %>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'Contacts', contacts_path, :class=>'nav-link' %>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Products</a>
+        </li>
+    </ul>
 </div>
 <div class="container-fluid g-0" id="backgrounds_container">
         <div class="page-container" id="1">
@@ -22,7 +22,7 @@
             <div class="row content">
                 <div class="col-lg-4">
                     <div class="h-100 content-wrapper">
-                        <div class="content-body">
+                        <div class="content-body text-center">
                             <h1>About us...</h1>
                             <p>Inspired by the greenery of our city and the surrounding Peak District, we put our uttermost attention in quality and sustainability.</p>
                         </div>
@@ -76,8 +76,8 @@
            
                 </div>
                 <div class="col-lg-4 content-wrapper">
-                    <div class="d-flex flex-column align-items-center content-body">
-                        <a href="#3"><i class="fa-duotone fa-chevrons-down"><h1>Find out more!</h1></a>
+                    <div class="w-100">
+                        <%= render partial: 'welcome/clothes_carousel'%>
                     </div>
                 </div>
             </div>
@@ -87,13 +87,3 @@
         </div>
     
 </div>
-
-<script>
-    $(".container-fluid").kendoContextMenu({
-        scrollable: {
-            distance: 2000
-        }
-    });
-
-    document.getElementById('logo').style.top = 0;
-</script>

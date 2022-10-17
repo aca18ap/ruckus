@@ -4,7 +4,7 @@ html, body{
 }
 
 #backgrounds_container{
-
+    z-index: 1;
 }
 
 p{
@@ -17,7 +17,7 @@ p{
     height: 100%;
     width: 100%;
     display: block;
-    z-index: 999;
+    z-index: 1;
     font-size: x-large;
 }
 
@@ -25,6 +25,7 @@ p{
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 
 }
 
@@ -32,14 +33,13 @@ p{
     display: flex;
     align-items: center;
     flex-direction: column;
-    align-items: center;
     width: 50%;
-    background: white;
+    padding: 20px;
+    background: #28F730;
     border-style: solid;
     border: 2x;
-    padding: 30px;
     color: black;
-    box-shadow: -15px -15px 0px 5px #AAF81C;
+    box-shadow: -15px -15px 0px 5px #5F34F7;
 
 }
 
@@ -54,7 +54,6 @@ p{
     width: 100%;
     height: 100vh;
     margin-top: 0px;
-    scroll-margin: 20px;
     scroll-snap-align: center;
     scroll-snap-stop: normal;
     position: relative;
@@ -109,20 +108,26 @@ p{
 }
 
 #logo{
-    overflow: hidden;
-    z-index: 900;
     padding-top: 30px;
-    position: absolute;
+    position: fixed;
+    z-index: 2;
+    overflow: hidden;
 }
 
 #nav-menu-logo{
-    z-index: 201;
     top: 25%;
     left: 250px;
     border-left: 2px solid black;
 
     .nav-link{
         color: white;
+        transition: all 0.1s ease-in-out 0.1s;
+
+    }
+
+    .nav-link:hover{
+        font-size: 1.25rem;
+        transition: all 0.1s ease-in-out 0.1s;
     }
 
 }
@@ -130,7 +135,6 @@ p{
 .logo_img{
     height: 250px; 
     box-shadow: -15px -15px 0px 5px rgb(255, 255, 255);
-    z-index: 300;
 }
 
 

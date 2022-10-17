@@ -1,10 +1,29 @@
-<div class="d-flex w-100" id="contacts-logo">
+<div class="d-flex w-100 logo-overlay" id="contacts-logo">
     <a href="/"><img src="ruckus_logo.png" class="logo_img"></a>
+    <ul class="nav flex-column" id="nav-menu-logo">
+        <li class="nav-item">
+            <%= link_to 'About us', about_path, :class=>'nav-link' %>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'FAQs', faq_path, :class=>'nav-link' %>
+        </li>
+        <li class="nav-item">
+            <%= link_to 'Contacts', contacts_path, :class=>'nav-link' %>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link disabled" href="#">Products</a>
+        </li>
+    </ul>
 </div>
 <div class="container-fluid " id="contacts">
     <div class="content-wrapper-contacts row">
        
-        <div class="col-4"></div>
+        <div class="col-4 d-flex align-items-center justify-content-end">
+            <div class="content-body-contacts">
+                <h2>Don't hesitate to get in touch with us!</h2>
+                <p>If you have any feedback or unanswered questions, please get in touch with us and we'll try our best to help you out</p>
+            </div>
+        </div>
         <div class="col-3"></div>
         <div class="col-5 d-flex align-items-center">
             <div class="content-body-contacts">
@@ -17,9 +36,11 @@
                         <i class="fa-brands fa-facebook"> @RUCKUSPEAK</i>
                     </a></li>
                     <li class="social-link"><a href="http://instagram.com">
-                    <i class="fa-brands fa-instagram"> @RUCKUSPEAK</i>
-                    </li></a>
-                    <li class="social-link"><i class="fa-regular fa-envelope"> ruckuspeak@gmail.com</i></li>
+                        <i class="fa-brands fa-instagram"> @RUCKUSPEAK</i>
+                    </li>
+                    <li class="social-link"><a href="mailto:ruckuspeak@gmail.com">
+                        <i class="fa-regular fa-envelope"> ruckuspeak@gmail.com</i>
+                    </a></li>
                 </ul>
             </div>
         </div>

@@ -1,0 +1,71 @@
+<footer class="text-center text-lg-start bg-white text-muted">
+
+    <section class="">
+    <!-- Footer -->
+    <footer class="text-center text-white" style="background-color: #0a4275;">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+        <!-- Section: CTA -->
+        <section class="">
+            <p class="d-flex justify-content-center align-items-center">
+            <span class="me-3">Register for free</span>
+            <%= link_to 'Sign up', '#',  {:remote => true, 'data-bs-toggle' =>  "modal", 'data-bs-target' => '#signUpModal', class: 'btn btn-success'}  %>                    </div>
+
+            </p>
+        </section>
+        <!-- Section: CTA -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+    </section>
+</footer>
+<div class="modal fade" id="signUpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="signUpModalLabel">You're almost there...</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <% if notice %>
+            <%= notice %>
+            <% end %>
+            <div>
+                <p>Thank you for subscribing to the newsletter.You'll soon hear from us with exciting updates on our launch!</p>
+            </div>
+            
+
+            <%= form_for @subscriber, :id => 'form' do |f|%>
+            <div class="col-6">
+                <div class="field">
+                    <%= f.label :name %><br />
+                    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+                </div>
+
+                <div class="field">
+                    <%= f.label :email %><br />
+                    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+                </div> 
+                
+                <div class="field">
+                    <%= f.label :source %><br />
+                    <%= f.select :source, ['Search engine', 'Social media', 'Word of mouth'] %>
+                
+                </div>
+            </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <%= f.submit(class:"btn btn-success") %>
+                </div>
+            <% end%>
+        </div>
+    </div>
+</div>
