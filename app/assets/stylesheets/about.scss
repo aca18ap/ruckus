@@ -4,7 +4,8 @@ html, body{
 }
 
 #backgrounds_container{
-    z-index: 1;
+    z-index: 0;
+    position: relative;
 }
 
 p{
@@ -17,15 +18,18 @@ p{
     height: 100%;
     width: 100%;
     display: block;
-    z-index: 1;
     font-size: x-large;
 }
 
 .content-wrapper{
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
     height: 100%;
+}
+
+.transparent-background{
+    background-color: rgba(grey, 0.4);
 
 }
 
@@ -33,14 +37,17 @@ p{
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 50%;
-    padding: 20px;
-    background: #28F730;
-    border-style: solid;
-    border: 2x;
-    color: black;
-    box-shadow: -15px -15px 0px 5px #5F34F7;
+    width: 100%;
+    padding: 10%;
+    color: white;
 
+    h1{
+        font-size: 4em;
+    }
+
+    p{
+        font-size: 1.5em;
+    }
 }
 
 .background_image{
@@ -110,15 +117,21 @@ p{
 #logo{
     padding-top: 30px;
     position: fixed;
-    z-index: 2;
     overflow: hidden;
+    pointer-events: all;
+    z-index: 1;
 }
 
+
 #nav-menu-logo{
+    z-index: 3;
     top: 25%;
     left: 250px;
+    align-self: center;
     border-left: 2px solid black;
-
+    font-size: 1.5em;
+    overflow: hidden;
+    white-space: nowrap;
     .nav-link{
         color: white;
         transition: all 0.1s ease-in-out 0.1s;
@@ -126,18 +139,50 @@ p{
     }
 
     .nav-link:hover{
-        font-size: 1.25rem;
+        font-size: 1.75rem;
         transition: all 0.1s ease-in-out 0.1s;
     }
 
+    .nav-item{
+        width: 0px;
+        text-overflow: ellipsis;
+        transition: all 0.1s ease-in-out 0.1s;
+
+    }
+
+    a{
+        text-overflow: ellipsis;
+    }
+    .nav-item:hover{
+        width: 100px;
+        transition: all 0.2s ease-out 0.1s;
+    }
+}
+
+.auto-width{
+    width: auto;
 }
 
 .logo_img{
     height: 250px; 
-    box-shadow: -15px -15px 0px 5px rgb(255, 255, 255);
+    
 }
 
+#logo_img{
+   
+}
 
+.nav-icon{
+    width: 300px;
+    color: white;
+    z-index: 3;
+    i{
+        transform: scale(13,4);
+    }
+}
 
+#process{
+    filter: invert(1);
+}
 
 

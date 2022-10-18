@@ -49,15 +49,51 @@
 
 // });
 
-fetch('https://api.unsplash.com/photos/random/?count=5&client_id=52d8369eb3e2576a5f5b6423865e074e9c7045761bff1ac5664ff3e0bdb57a1d') 
-  .then(response => response.json())
-  .then(data => {
-    data.forEaach(function(image, i) {
-      document.querySelector("#slide-" + (i+1)).innerHTML = `
-        <img src="${image.urls.regular}" alt="">
-        <p class="author-info">
-          <a href="${image.links.html}?utm_source=slider-thing&utm_medium=referral&utm_campaign=api-credit">Photo by ${image.user.name}</a> on <a href="https://unsplash.com/">Unsplash</a>
-        </p>
-      `;
-    });
+
+function scrollToAnchor(aid){
+  var aTag = document.getElementById(aid);
+  console.log(aTag.style);
+  $('html,body').animate({scrollTop: aTag.offset().top}, 2000);
+}
+
+
+$(document).ready((e)=>{
+
+  $('#logo_img').hover(function(){
+    $('.nav-item').css("width", "100px");
+  }, function(){
+    $('.nav-item').css("width", "0px");
+  })
+
+  // document.querySelectorAll('.nav-icon').forEach(function(item){
+  //   console.log('click');
+  //   item.addEventListener('click',(e)=>{
+  //     let target = e.currentTarget.target;
+  //     scrollToAnchor(target);
+  //     console.log(target);
+  //   })
+  // })
+  $(document).on('click', 'a[href^="#"].nav-icon', function(e) {
+    // target element id
+    var id = $(this).attr('href');
+    console.log();
+    // target element
+    var $id = $(id);
+    if ($id.length === 0) {
+        return;
+    }
+  
+    // prevent standard hash navigation (avoid blinking in IE)
+    e.preventDefault();
+  
+    // top position relative to the document
+    document
+      .getElementById(id.substring(1))
+      .scrollIntoView({ behavior: "smooth" });
   });
+  
+})
+
+
+
+
