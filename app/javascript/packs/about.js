@@ -60,7 +60,7 @@ function scrollToAnchor(aid){
 $(document).ready((e)=>{
 
   $('#logo_img').hover(function(){
-    $('.nav-item').css("width", "100px");
+    $('.nav-item').css("width", "120px");
   }, function(){
     $('.nav-item').css("width", "0px");
   })
