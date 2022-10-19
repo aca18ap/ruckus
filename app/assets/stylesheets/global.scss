@@ -11,13 +11,39 @@ h1 {
     color: white;
     font-family: "BebasNeue";
     font-weight: normal;
-    
+}
+
+h2 {
+    color: white;
+    font-family: "BebasNeue";
+    font-weight: normal;
+}
+
+h3 {
+    color: white;
+    font-family: "BebasNeue";
+    font-weight: normal;
+}
+
+h4 {
+    color: white;
+    font-family: "BebasNeue";
+    font-weight: normal;
 }
 
 p{
     font-family: "BebasNeue";
+    transform:scale(1,1.5);
+    margin-top: 50%;
+    padding-top: 2%;
+
 }
 
 a{
     font-family: "BebasNeue";
+}
+
+
+:root {
+    --green: #AAF81C;
 }

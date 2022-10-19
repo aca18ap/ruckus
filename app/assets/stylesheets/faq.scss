@@ -9,4 +9,26 @@
 #faq-logo{
     top: 10%;
     left: 80%;
+    #nav-menu-logo{
+        width: 300px;
+        right: 250px;
+        border-left: 0px;
+        border-right: 2px solid black;
+    }
+}
+
+.accordion{
+    margin: 10%;
+    background-color: black;
+    p{
+        padding-top: 2%;
+    }
+
+}
+
+.accordion-body{
+}
+
+.accordion-button{
+    background-color: var(--green);
 }

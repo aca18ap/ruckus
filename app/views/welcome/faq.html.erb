@@ -1,9 +1,25 @@
 <div class="d-flex w-100 logo-overlay" id="faq-logo">
     <a href="/"><img src="ruckus_logo.png" class="logo_img"></a>
+    <ul class="nav flex-column" id="nav-menu-logo">
+    <li class="nav-item">
+        <%= link_to 'About us', about_path, :class=>'nav-link' %>
+    </li>
+    <li class="nav-item">
+        <%= link_to 'FAQs', faq_path, :class=>'nav-link' %>
+    </li>
+    <li class="nav-item">
+        <%= link_to 'Contacts', contacts_path, :class=>'nav-link' %>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link disabled" href="#">Products</a>
+    </li>
+</ul>
 </div>
 <div class="container-fluid" id="faq">
-  <div class="col-6 content-wrapper">
-    <div class="d-flex content-body">
+<div class="row no-gutters h-100">
+
+  <div class="col-6 no-gutters content-wrapper transparent-background">
+    <div class="d-flex align-items-center h-100">
       <div class="accordion" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
@@ -13,7 +29,7 @@
           </h2>
           <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              <p>Ruckus Peak provides quality branded items for affordable prices. Some of the brands included within the website are The North Face, Berghaus and RAB. However, many more branded outdoor clothing will also be available. If there are any brands you would love to see on Ruckus Peak, drop an email to our customer service email: ruckuspeak@gmail.com</p>
             </div>
           </div>
         </div>
@@ -25,7 +41,7 @@
           </h2>
           <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              <p>Our brand is individual in the way in which we cut out the troublesome process of sourcing, authenticating and refurbishing branded clothing. We allow the ease of browsing branded clothing without the inconvenience of searching for it. </p>
             </div>
           </div>
         </div>
@@ -49,11 +65,12 @@
           </h2>
           <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
             <div class="accordion-body">
-              <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+              <p> All our clothes are pre-loved items in need of a touch of refurbishment, done by ourselves. Our aim is to provide you with quality branded clothing, without having to buy new items. All parcels sent by Ruckus Peak will be packaged using pre-used packaging in order to reuse plastic and other non bio-degradable products.</p>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 </div>

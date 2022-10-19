@@ -27,7 +27,7 @@ p{
 .content-wrapper{
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: center;
     height: 100%;
 }
 
@@ -38,10 +38,11 @@ p{
 
 .content-body{
     display: flex;
-    align-items: center;
+    align-content: center;
     flex-direction: column;
     width: 100%;
-    padding: 10%;
+    padding-left: 10%;
+    padding-right: 10%;
     color: white;
 
     h1{
@@ -49,7 +50,7 @@ p{
     }
 
     p{
-        font-size: 1.5em;
+        font-size: 1.25em;
     }
 }
 

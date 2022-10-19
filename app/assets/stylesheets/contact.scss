@@ -41,18 +41,47 @@ html, body{
     display: flex;
     flex-direction: column;
     align-items: start;
-    width: 50%;
+    width: 80%;
     padding: 30px;
     color: white;
     li{
         margin: 10px 0;
         a{
             color: white;
-            font-size: 1.5em;
+            font-size: 1.75em;
+            transition: all 0.1s ease 0.1s;
+            -webkit-text-stroke: 1px black;
         }
       }
-    li:hover{
-        border-bottom: #AAF81C;
+    li.twitter:hover{
+        a{color: #1DA1F2;}
+    }    
+    li.facebook:hover{
+        a{color: #4267B2;}
+    }      
+    li.tiktok:hover{
+        a{
+            color: cyan;
+            text-shadow: 10px 10px magenta;
+            
+        }
+    }   
+    li.instagram:hover{
+        a{
+            background: -webkit-linear-gradient( #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }    
+    li.email:hover{
+        a{
+            color: white;
+            text-shadow: 0px 12px red;
+        }
+    }
+
+    p{
+        font-size: 1.25em;
     }
 }
 
@@ -60,7 +89,7 @@ html, body{
     color:black;
     list-style: none;
     font-weight: bold;
-    transition: all 0.1s ease-in-out 0.1s;
+    //transition: all 0.1s ease-in-out 0.1s;
 
 }
 
