@@ -44,13 +44,14 @@ html, body{
     width: 80%;
     padding: 30px;
     color: white;
+    z-index: 2;
     li{
         margin: 10px 0;
         a{
             color: white;
             font-size: 1.75em;
             transition: all 0.1s ease 0.1s;
-            -webkit-text-stroke: 1px black;
+            -webkit-text-stroke: 1.5px black;
         }
       }
     li.twitter:hover{

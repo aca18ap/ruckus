@@ -1,71 +1,57 @@
-<footer class="text-center text-lg-start bg-white text-muted">
-
-    <section class="">
-    <!-- Footer -->
-    <footer class="text-center text-white" style="background-color: #0a4275;">
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-        <!-- Section: CTA -->
-        <section class="">
-            <p class="d-flex justify-content-center align-items-center">
-            <span class="me-3">Register for free</span>
-            <%= link_to 'Sign up', '#',  {:remote => true, 'data-bs-toggle' =>  "modal", 'data-bs-target' => '#signUpModal', class: 'btn btn-success'}  %>                    </div>
-
-            </p>
-        </section>
-        <!-- Section: CTA -->
-        </div>
-        <!-- Grid container -->
-
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        © 2020 Copyright:
-        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
-        </div>
-        <!-- Copyright -->
-    </footer>
-    <!-- Footer -->
-    </section>
-</footer>
-<div class="modal fade" id="signUpModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="signUpModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="signUpModalLabel">You're almost there...</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <% if notice %>
-            <%= notice %>
-            <% end %>
-            <div>
-                <p>Thank you for subscribing to the newsletter.You'll soon hear from us with exciting updates on our launch!</p>
-            </div>
-            
-
-            <%= form_for @subscriber, :id => 'form' do |f|%>
-            <div class="col-6">
-                <div class="field">
-                    <%= f.label :name %><br />
-                    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
-                </div>
-
-                <div class="field">
-                    <%= f.label :email %><br />
-                    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-                </div> 
+<%= javascript_pack_tag 'global.js'%>
+<footer class="text-black text-center">
+<div class="container-fluid p-4">
+    <div class="row">
+        <div class="col-4">
+            <div class="h-100 d-flex align-items-center justify-content-center">
+                <div class="d-flex flex-column links p-3">
                 
-                <div class="field">
-                    <%= f.label :source %><br />
-                    <%= f.select :source, ['Search engine', 'Social media', 'Word of mouth'] %>
+                    <%= link_to 'Home', root_path%>
+                    <%= link_to 'About Us', about_path%>
+                    <%= link_to 'Contacts', contacts_path%>
+                    <%= link_to 'FAQ', faq_path%>
+                </div>
+                <div class="d-flex flex-column links p-3">
                 
+                    <%= link_to 'Legal stuff', root_path%>
+                    <%= link_to 'Privacy policy', about_path%>
+                    <%= link_to 'Security', contacts_path%>
                 </div>
             </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <%= f.submit(class:"btn btn-success") %>
-                </div>
-            <% end%>
+        </div>
+        <div class="col-lg-4">
+            <div class="d-flex justify-content-around">
+
+                <a href="http://twitter.com">
+                    <i class="fa-brands fa-twitter twitter"></i>
+                </a>
+                <a href="http://facebook.com">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+                <a href="http://instagram.com">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="mailto:ruckuspeak@gmail.com">
+                    <i class="fa-solid fa-envelope"></i>
+                </a>
+                <a href="mailto:ruckuspeak@gmail.com">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+            <div class="d-flex justify-content-center">
+                <img src="ruckus_logo.png" alt="" class="w-25">
+            </div>
+            <div class="text-center w-100 p-3">
+                © 2022 Copyright: <a href="/" class="text-white"></a>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="d-flex align-items-center justify-content-center sign-up">
+                <input type="text">
+                <button class="btn" data-remote='true'>Sign me up</button>
+            </div>
         </div>
     </div>
 </div>
+
+</footer>

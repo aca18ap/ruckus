@@ -1,4 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'from@example.com'
+  default from: 'newsletter@ruckuspeak.com'
   layout 'mailer'
+
 end

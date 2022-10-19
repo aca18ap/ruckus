@@ -5,12 +5,12 @@ class SubscribersController < ApplicationController
 
   def create
     @subscriber = Subscriber.new(subscriber_params)
+    cookies[:saved_lead] = false
     if @subscriber.save
       cookies[:saved_lead] = true
-      redirect_to root_path, notice: "Saved successfully"
-    else
-      redirect_to root_path, notice: "Failed to save"
+      SubscriberMailer.with(subscriber: @subscriber).subscribe_success.deliver_now
     end
+    render json: { save: cookies[:saved_lead] }
   end
 
   private 

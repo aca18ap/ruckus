@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  class OnlyAjaxRequest
+    def matches?(request)
+      request.xhr?
+    end
+ end
   get 'subscribers/index'
   resources :products
   resources :subscribers
