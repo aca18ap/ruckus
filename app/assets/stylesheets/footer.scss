@@ -1,7 +1,21 @@
 footer{
     background-color: var(--green);
-
+    height: 250px;
     a{
         color: black;
+    }
+
+    .socials{
+        i{font-size: 2em;}
+        z-index: 995;
+    }
+
+    img{
+        margin: -5%;
+    }
+
+    .socials{
+        z-index: 10;
+
     }
 }

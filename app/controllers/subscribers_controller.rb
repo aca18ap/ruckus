@@ -8,9 +8,12 @@ class SubscribersController < ApplicationController
     cookies[:saved_lead] = false
     if @subscriber.save
       cookies[:saved_lead] = true
+      flash.notice = "Successfully subscribed"
       SubscriberMailer.with(subscriber: @subscriber).subscribe_success.deliver_now
+    else
+      flash.now[:notice] = "Something went wrong"
     end
-    render json: { save: cookies[:saved_lead] }
+    #render json: { save: cookies[:saved_lead] }
   end
 
   private 
