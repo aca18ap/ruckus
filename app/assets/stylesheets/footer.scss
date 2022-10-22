@@ -1,6 +1,6 @@
 footer{
     background-color: var(--green);
-    height: 250px;
+    //height: 250px;
     a{
         color: black;
     }
@@ -11,7 +11,7 @@ footer{
     }
 
     img{
-        margin: -5%;
+        height: fit-content;
     }
 
     .socials{
