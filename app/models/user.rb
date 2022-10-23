@@ -9,7 +9,9 @@ class User < ApplicationRecord
   validates :email, :name, :password, :password_confirmation, presence: true
   before_create :default_values
 
-
+  def admin?
+    admin
+  end
 
   private 
     def default_values
