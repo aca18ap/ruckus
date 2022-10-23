@@ -1,12 +1,17 @@
 footer{
     background-color: var(--green);
-    //height: 250px;
+    width: 100%;
+    padding-top: 2%;
+
     a{
         color: black;
     }
 
     .socials{
-        i{font-size: 2em;}
+        i{
+            font-size: 2em;
+            text-shadow: 0 0 3px #000;
+        }
         z-index: 995;
     }
 
@@ -18,4 +23,6 @@ footer{
         z-index: 10;
 
     }
+
+    position: reltaive;
 }

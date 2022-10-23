@@ -1,4 +1,23 @@
 <p id="notice"><%= notice %></p>
+<div class="container-fluid">
+    <h1>Admin Dashboard</h1>
+    <div class="row">
+        <div class="col-lg-6">
+            <h2>Users List</h2>
+            <div>
+                <%# list of users %>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <h2>Products List</h2>
+            <div>
+                <%# list of products %>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

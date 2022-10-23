@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
-  def index
+  def landing
     @subscriber = Subscriber.new()
   end
 

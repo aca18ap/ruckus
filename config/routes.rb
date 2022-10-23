@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users
 
-  root 'welcome#index'
+  root 'welcome#landing'
   get 'about', to: 'welcome#about'
   get 'faq', to: 'welcome#faq'
   get 'contacts', to: 'welcome#contacts'

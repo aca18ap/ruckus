@@ -5,16 +5,9 @@
 
 
 body{
-    content: "";
-    opacity: 1;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    position: absolute;
-    z-index: -1;   
-    
+    overflow-y: scroll;
   }
+
 
   #logo-bar{
     width: 100%;
@@ -57,12 +50,8 @@ body{
     width: 85%;
     align-self: center;
 }
-  
 
 
-#logo-homepage{
-    box-shadow:rgb(30, 30, 10);
-}
 
 #slogan{
     z-index: 100;
@@ -76,21 +65,37 @@ body{
 }
 
 @keyframes logoMove{
-    from {margin-top: 0;}
-    to {margin-top: -175px;}
+    from {margin-top: 0px;}
+    to {margin-top: -75px;}
 }
 
+#logo_cta{
+    margin-top: 0px;
+    @media (max-width: 1000px){
+        animation-name: logoMove;
+        animation-duration: 1.5s;
+        animation-fill-mode: forwards;
+        animation-delay: 2s;
 
+    }
+}
 
 img#homepage_logo{
     width: 90%;
     margin-top: 0;
     animation-delay: 0s;
+
     animation-name: logoMove;
     animation-duration: 1.3s;
     animation-fill-mode: forwards;
+
 }
 
+.homepage_img{
+    @media (min-width: 1080px){
+        //height: 100vh;
+    }
+}
 
 @keyframes sign_up_fade{
     from{opacity: 0;}
@@ -98,9 +103,6 @@ img#homepage_logo{
 }
 
 #sign_me_up{
-    position: absolute;
-    bottom: 130px;
-    width: 60%;
     opacity: 0;
     animation-delay: 3s;
 
@@ -115,20 +117,29 @@ img#homepage_logo{
     font-weight: bolder;
 }
 
-#logos{
-    position: absolute;
-    bottom: 30px;
-    width: 60%;
-    opacity: 0;
+.bg-ruckus{
+    background: var(--green);
+}
 
+#logos{
+    width: 100%;
+    opacity: 0;
     animation-delay: 3s;
     animation-name: sign_up_fade;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+
+}
+
+#welcome_content{
+    align-content: start;
+    @media (min-width: 1000px){
+        align-content: space-around;
+    }
 }
 
 ul#nav-menu {
-    position: fixed;
+    position: absolute;
     z-index: 100;
     top: 60%;
     border-left: 2px solid black;
