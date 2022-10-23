@@ -20,5 +20,7 @@
     <%= yield %>
   </body>
 
+  <% if controller_name == 'welcome' %>
   <%= render partial: 'layouts/footer' %>
+  <%end%>
 </html>
