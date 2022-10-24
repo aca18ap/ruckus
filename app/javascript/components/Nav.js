@@ -1,13 +1,40 @@
 import React from 'react'
 import './Nav.css'
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
+import NavDropdown from 'react-bootstrap/NavDropdown';
 
-function Nav() {
+function Navigation() {
   return (
-    <div className="navbar">
-        
-    <h1 className="text-black">RUCKUS PEAK</h1>
-    </div>
+    <Navbar bg="green" expand="lg">
+    <Container>
+      <Navbar.Brand href="/">React-Bootstrap</Navbar.Brand>
+      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="me-auto">
+          <Nav.Link href="/">Home</Nav.Link>
+          <Nav.Link href="/about">About Us</Nav.Link>
+          <Nav.Link href="/faq">Faq</Nav.Link>
+          <Nav.Link href="/contacts">Contacts</Nav.Link>
+          <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+            <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.2">
+              Another action
+            </NavDropdown.Item>
+            <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
+            <NavDropdown.Divider />
+            <NavDropdown.Item href="#action/3.4">
+              Separated link
+            </NavDropdown.Item>
+          </NavDropdown>
+        </Nav>
+      </Navbar.Collapse>
+    </Container>
+  </Navbar>
   );
 }
 
-export default Nav
+
+
+export default Navigation

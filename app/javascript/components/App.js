@@ -1,11 +1,13 @@
 import React, {Component} from 'react'
-import Nav from './Nav.js'
+import Navigation from './Nav.js'
+import AdminDashboard from './AdminDashboard.js'
 
 class App extends Component {
     render() {
         return(
             <div>
-                <Nav/>
+                <Navigation/>
+                <AdminDashboard/>
             </div>
         )
     }

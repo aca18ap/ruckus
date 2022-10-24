@@ -3,7 +3,16 @@ Rails.application.routes.draw do
     def matches?(request)
       request.xhr?
     end
- end
+  end
+
+  namespace :api do
+    namespace :v1 do
+      get 'users/index'
+      post 'users/create'
+      delete 'users/:id', to: 'users#destroy'
+    end
+  end
+
   get 'subscribers/index'
   resources :products
   resources :subscribers
