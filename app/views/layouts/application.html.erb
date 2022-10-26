@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <% csrf_token = form_authenticity_token %>
     <%= stylesheet_pack_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'  %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true%>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track' => true %>
@@ -15,6 +16,7 @@
   <%# <%= render partial: 'layouts/navbar'%>  
 
   <body>
+    <div id="root"></div>
     <p class="notice d-none"><%= notice%></p>
     <p class="alert d-none"><%= alert%></p> 
     <%= yield %>
@@ -23,4 +25,5 @@
   <% if controller_name == 'welcome' %>
   <%= render partial: 'layouts/footer' %>
   <%end%>
+  <%= javascript_pack_tag 'index' %>
 </html>

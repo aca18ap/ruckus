@@ -26,10 +26,9 @@ const UsersList = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    {console.log(users.data)}
                     {[...users.data].map((u, idx)=>{
                         return(
-                            <tr>
+                            <tr key={idx}>
                                 <td>{u.id}</td>
                                 <td>{u.name}</td>
                                 <td>{u.surname}</td>

@@ -10,14 +10,22 @@ Rails.application.routes.draw do
       get 'users/index'
       post 'users/create'
       delete 'users/:id', to: 'users#destroy'
+
+      get 'products/index'
+      post 'products/create'
+      patch 'products/:id', to: 'products#update'
+      delete 'products/:id', to: 'products#destroy'
     end
   end
 
   get 'subscribers/index'
-  resources :products
+  get 'products', to: 'products#index'
   resources :subscribers
   devise_for :users
   resources :users
+
+  get 'admin', to: 'admin#index'
+  get 'products', to: 'products#index'
 
   root 'welcome#landing'
   get 'about', to: 'welcome#about'
