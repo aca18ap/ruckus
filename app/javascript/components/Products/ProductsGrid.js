@@ -12,17 +12,18 @@ function ProductsGrid({products}){
             <Row>
                 {products.map((product)=>{
                     return(
-                        <Card style={{ width: '18rem' }}>
-                            {console.log(product)}
-                            <Card.Img variant="top" src={''} />
-                            <Card.Body>
-                                <Card.Title>{product.name}</Card.Title>
-                                <Card.Text>
-                                    {product.description}
-                                </Card.Text>
-                                <Button variant="primary">Go somewhere</Button>
-                            </Card.Body>
-                        </Card>
+                        <ProductTile product={product}></ProductTile>
+                        // <Card style={{ width: '18rem' }}>
+                        //     {console.log(product)}
+                        //     <Card.Img variant="top" src={''} />
+                        //     <Card.Body>
+                        //         <Card.Title>{product.name}</Card.Title>
+                        //         <Card.Text>
+                        //             {product.description}
+                        //         </Card.Text>
+                        //         <Button variant="primary">Go somewhere</Button>
+                        //     </Card.Body>
+                        // </Card>
                     )
                 })}
             </Row>

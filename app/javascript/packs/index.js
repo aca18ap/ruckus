@@ -10,6 +10,7 @@ import {
 import AdminDashboardApp from "../components/AdminDashboardApp";
 import ProductsApp from "../components/ProductsApp";
 import App from "../components/App";
+import ShowProductsApp from '../components/ShowProductsApp'
 
 
 createRoot(
@@ -18,8 +19,9 @@ createRoot(
 .render(
   <BrowserRouter>
     <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="products" element={<ProductsApp />} />
+      <Route exact path="/" element={<App />} />
+      <Route exact path="products" element={<ProductsApp />} />
+      <Route path="products/:id" element={<ShowProductsApp />} />
       <Route path="admin" element={<AdminDashboardApp />} />
     </Routes>
   </BrowserRouter>,

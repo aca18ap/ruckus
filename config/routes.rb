@@ -15,11 +15,13 @@ Rails.application.routes.draw do
       post 'products/create'
       patch 'products/:id', to: 'products#update'
       delete 'products/:id', to: 'products#destroy'
+      get 'products/:id', to: 'products#show'
     end
   end
 
   get 'subscribers/index'
   get 'products', to: 'products#index'
+  get 'products/*path', to: 'products#index'
   resources :subscribers
   devise_for :users
   resources :users
