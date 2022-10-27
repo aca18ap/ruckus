@@ -17,8 +17,9 @@ $(document).ready(function(){
                 beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
                 dataType: 'script',
                 data: data,
-                success: function(data, textStatus){
-                    let dataj = JSON.parse(data);
+                success: function(res, textStatus){
+                    console.log(res)
+                    let dataj = JSON.parse(res);
                     if(dataj['save'])
                         alert('successfully subscribed to newsletter')
                     else

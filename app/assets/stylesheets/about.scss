@@ -51,11 +51,12 @@ p{
     color: white;
 
     h1{
-        font-size: 4em;
+        font-size: 3.5em;
+        padding-bottom: 0%;
     }
 
     p{
-        font-size: 1.25em;
+        font-size: 1.375em;
     }
 }
 
@@ -200,6 +201,21 @@ p{
 
 #process{
     filter: invert(1);
+
+}
+
+.process_diagram_container{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.coming_banner{
+    font-size: 6em;
+    text-shadow: 10px 10px black;
+}
+
+.modal-backdrop{
+    opacity: 0.5 !important;
 }
 
 
