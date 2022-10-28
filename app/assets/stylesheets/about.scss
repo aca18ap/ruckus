@@ -1,3 +1,5 @@
+@import './color_palette';
+
 html, body{
     scroll-snap-type: y proximity;
     
@@ -48,7 +50,6 @@ p{
     width: 100%;
     padding-left: 10%;
     padding-right: 10%;
-    color: white;
 
     h1{
         font-size: 3.5em;
@@ -115,13 +116,11 @@ p{
 .scroll_down{
     bottom: 50px;
     right: 100px;
-    color: white;
 }
 
 .scroll_up{
     top: 50px;
     left: 100px;
-    color: white;
 }
 
 #logo{
@@ -143,12 +142,13 @@ p{
     overflow: hidden;
     white-space: nowrap;
     .nav-link{
-        color: white;
+        color:  $beau-blue;
         transition: all 0.1s ease-in-out 0.1s;
-
+        
     }
-
+    
     .nav-link:hover{
+        color:  $pewter-blue;
         font-size: 1.75rem;
         transition: all 0.1s ease-in-out 0.1s;
     }
@@ -174,9 +174,11 @@ p{
 }
 
 .logo_img{
-    height: 250px; 
-    
-    
+    width: 250px; 
+    background-color: var(--green);
+    height: 250px;
+    object-fit: contain;
+    padding:10%;
 }
 
 #logo_img{
@@ -185,7 +187,7 @@ p{
 
 .nav-icon{
     width: 300px;
-    color: white;
+    color: $beau-blue;
     z-index: 3;
     i{
         transform: scale(13,4);
@@ -195,7 +197,7 @@ p{
 }
 
 .nav-icon:hover{
-    color:grey;
+    color:$pewter-blue;
     transition: all 0.2s ease-in-out 0.1s;
 }
 
@@ -210,7 +212,7 @@ p{
 }
 
 .coming_banner{
-    font-size: 6em;
+    font-size: 5.5em;
     text-shadow: 10px 10px black;
 }
 
@@ -218,4 +220,24 @@ p{
     opacity: 0.5 !important;
 }
 
+.pt-10{
+    padding-top: 10%;
+}
+
+.active{
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.product_thumb_about{
+    width: 15%;
+    object-fit: contain;
+    transition: 0.2s ease-in-out
+
+}
+
+.product_thumb_about:hover{
+    transform: scale(1.5);
+    transition: 0.2s ease-in-out;
+}
 

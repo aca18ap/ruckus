@@ -1,4 +1,10 @@
-$theme-colors: (
-    "primary": #AAF81C
+@import './color_palette';
 
-);
+.btn-primary{
+    background-color: $black-chocolate !important;
+    color: $beau-blue !important;
+}
+
+.btn{
+    border-style: none !important;
+}

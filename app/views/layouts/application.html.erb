@@ -20,5 +20,7 @@
     <%= yield %>
   </body>
 
+  <% if !current_page?(:root)  %>
   <%= render partial: 'layouts/footer' %>
+  <%end%>
 </html>

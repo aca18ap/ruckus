@@ -1,13 +1,22 @@
 // Place all the styles related to the Welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+@import './color_palette';
 
 
 
 body{
-    overflow-y: scroll;
+    @media (max-width: 1000px){
+        overflow-y: scroll !important;
+        
+    }
+
+    
   }
 
+  .homepage_container{
+    height: 100vh;
+  }
 
   #logo-bar{
     width: 100%;
@@ -66,7 +75,7 @@ body{
 
 @keyframes logoMove{
     from {margin-top: 0px;}
-    to {margin-top: -75px;}
+    to {margin-top: -40vh;}
 }
 
 #logo_cta{
@@ -92,9 +101,9 @@ img#homepage_logo{
 }
 
 .homepage_img{
-    @media (min-width: 1080px){
-        //height: 100vh;
-    }
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
 }
 
 @keyframes sign_up_fade{
@@ -110,12 +119,15 @@ img#homepage_logo{
     animation-name: sign_up_fade;
     animation-duration: 1s;
     animation-fill-mode: forwards;
+    p{
+        color: $black-chocolate;
+    }
 }
 
 #sign_me_up_caption{
     font-size: larger;
     font-weight: bolder;
-    color: black;
+    color: $black-chocolate;
 }
 
 .bg-ruckus{
@@ -143,13 +155,13 @@ ul#nav-menu {
     position: absolute;
     z-index: 100;
     top: 60%;
-    border-left: 2px solid black;
+    border-left: 2px solid $black-chocolate;
 
 }
 
 a.nav-link{
  
-    color: black;
+    color: $black-chocolate;
 }
 
 a.nav-link:hover{
@@ -157,7 +169,7 @@ a.nav-link:hover{
 }
 
 input { 
-    border: 1px solid black;
+    border: 1px solid $black-chocolate;
     background-color: rgba(white, 0.8);
 }
 

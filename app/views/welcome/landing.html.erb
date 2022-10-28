@@ -4,13 +4,9 @@
 
 <!-- Modal -->
 
-    <div class="row">
+    <div class="row h-100 homepage_container">
         <div id="slogan_banner" class="col-lg-5 col-sm-12 p-0">
-            <span id="slogan" class="w-100">
-                <h1 >Quality doesn't have to cost</h1>
-            
-            </span>
-            <%= image_tag('walking.jpg', class: "w-100 homepage_img")%>
+            <%= image_tag('home.jpg', class: "homepage_img")%>
         </div>
         <div class="col-lg-7 col-sm-12 p-0 shadow-lg bg-ruckus" id="logo_cta">
             <ul class="nav navbar flex-column z-100" id="nav-menu">
@@ -36,7 +32,7 @@
                         <p class="text-center">Coming end of 2022 ....</p>
                         
                         <div class="d-flex justify-content-center">
-                        <%= link_to 'Sign up', '#',  {:remote => true, 'data-bs-toggle' =>  "modal", 'data-bs-target' => '#signUpModal', class: 'btn btn-success'}  %>                    </div>
+                        <%= link_to 'Sign up', '#',  {:remote => true, 'data-bs-toggle' =>  "modal", 'data-bs-target' => '#signUpModal', class: 'btn btn-primary'}  %>                    </div>
                                 
                     </div>
                 </div>

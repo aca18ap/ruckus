@@ -2,7 +2,10 @@
 <div class="container-fluid g-0" id="backgrounds_container">
     <div class="w-100 d-flex justify-content-center" id="logo">
         <div class="logo_wrapper d-flex "  id="logo_img">
-            <a href="/"><img src="ruckus_logo.png" class="logo_img"></a>
+            <a href="/">
+            <%# <img src="ruckus_logo.png" class="logo_img"> %>
+            <%= image_tag('ruckus_no_bg.png', class: 'logo_img') %>
+            </a>
             <ul class="nav flex-column transparent-background" id="nav-menu-logo">
                 <li class="nav-item">
                     <%= link_to 'About us', about_path, :class=>'nav-link' %>
@@ -19,7 +22,7 @@
         </div>
     </div>
         <div class="page-container" id="1">
-            <%= image_tag('about/abt1.webp', width: '100%', class: "background_image z-0") %>
+            <%= image_tag('about/abt1.jpg', width: '100%', class: "background_image z-0") %>
             <div class="row content">
                 <div class="col-lg-5 col-sm-12 transparent-background">
                     <div class="h-100 content-wrapper align-items-center">
@@ -44,7 +47,7 @@
         </div>
         <div class="page-container" id="2">
 
-            <%= image_tag('about/abt3.jpg', width: '100%', class: "background_image") %>
+            <%= image_tag('about/slav.jpg', width: '100%', class: "background_image") %>
             <div class="row content g-0">
                 <div class="col-lg-5 content-wrapper py-5">
                     <div class="d-flex flex-wrap align-content-between h-100">
@@ -52,9 +55,6 @@
                             <a class="nav-icon text-center" href="#1">
                                 <i class="fa-solid fa-chevron-up"></i>
                             </a>
-                        </div>
-                        <div class="transparent-background process_diagram_container">
-                            <%= image_tag('process_diagram.png', width: '100%', id:"process")%>
                         </div>
                         <div class="d-flex w-100 justify-content-center">
                             <a class="nav-icon text-center" href="#3">
@@ -66,18 +66,21 @@
                 <div class="col-lg-3 content-wrapper">
            
                 </div>
-                <div class="col-lg-4 content-wrapper transparent-background ">
+                <div class="col-lg-4 content-wrapper transparent-background">
                      <div class="content-body text-center">
                         <h1>How we do things</h1>
                         <br>
                         <p>Ruckus Peak sources adult outwear in need of a touch of TLC from second hand retailers and sellers in order to revive the items to produce quality clothing for an affordable budget. All products are sourced locally, handpicked by ourselves and acquired in the most efficient and environmentally responsible way possible.</p>
+                        <%# <div class="transparent-background process_diagram_container">
+                            <%= image_tag('process_diagram.png', width: '100%', id:"process")%>
+                        <%# </div> %> 
                     </div>
                 </div>
             </div>
         
         </div>
         <div class="page-container" id="3">
-            <%= image_tag('about/abt5.jpg', width: '100%', class: "background_image") %>
+            <%= image_tag('about/walking_zoom.jpg', width: '100%', class: "background_image") %>
             <div class="row content">
                 <div class="col-lg-4 transparent-background">
                     <div class="h-100 content-wrapper">
@@ -99,11 +102,7 @@
                                 <i class="fa-solid fa-chevron-up"></i>
                             </a>
                         </div>
-                        <div class="w-100 content-body">
-                            <div class="text-center">
-                                <%= render partial: 'welcome/clothes_carousel'%>
-                            </div>
-                        </div>
+                        
                         <div class="w-100 content-body">
                             <a class="nav-icon text-center w-100" href="#4">
                                 <i class="fa-solid fa-chevron-down"></i>
@@ -115,13 +114,24 @@
         </div>
         <div class="page-container last-div" id="4">
             <%= image_tag('about/train.jpg', width: '100%', class: "background_image") %>
-             <div class="row content">
-                <div class="col-12 h-100">
-                    <div class="h-100 d-flex align-items-center justify-content-center">
-                        <h1 class="coming_banner text-shadow">Coming Winter 2022</h1>
+             <div class="content pt-10">
+                <div class="d-flex justify-content-center align-items-center h-100">
+                    <div class="d-flex justify-content-center">
+                        <div class="d-flex flex-column h-100">
+                            <h1 class="coming_banner text-shadow text-center">Coming Winter 2022</h1>
+                            <div class="d-flex justify-content-around transparent-background">
+
+                                <%= image_tag('carousel_images/clothes_1.png', class: 'product_thumb_about')%>
+                                <%= image_tag('carousel_images/clothes_2.png', class: 'product_thumb_about')%>
+                                <%= image_tag('carousel_images/clothes_3.png', class: 'product_thumb_about')%>
+                                <%= image_tag('carousel_images/clothes_4.png', class: 'product_thumb_about')%>
+                                <%= image_tag('carousel_images/clothes_5.png', class: 'product_thumb_about')%>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
+
+             </div>
         </div>
     
 </div>
