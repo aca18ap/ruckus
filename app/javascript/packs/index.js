@@ -10,7 +10,7 @@ import {
 import AdminDashboardApp from "../components/AdminDashboardApp";
 import ProductsApp from "../components/ProductsApp";
 import App from "../components/App";
-import ShowProductsApp from '../components/ShowProductsApp'
+import ShowProductApp from '../components/ShowProductApp'
 
 
 createRoot(
@@ -21,7 +21,7 @@ createRoot(
     <Routes>
       <Route exact path="/" element={<App />} />
       <Route exact path="products" element={<ProductsApp />} />
-      <Route path="products/:id" element={<ShowProductsApp />} />
+      <Route path="products/:id" element={<ShowProductApp />} />
       <Route path="admin" element={<AdminDashboardApp />} />
     </Routes>
   </BrowserRouter>,
