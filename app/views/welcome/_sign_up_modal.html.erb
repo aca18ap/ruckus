@@ -1,4 +1,4 @@
-<div class="modal-content">
+<div class="modal-content bg-black">
     <div class="modal-header">
         <h5 class="modal-title" id="signUpModalLabel">You're almost there...</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -25,14 +25,14 @@
                 </div> 
                 
                 <div class="field">
-                    <%= f.label :source %><br />
+                    <%= f.label :source, 'Where did you find us?' %><br />
                     <%= f.select :source, ['Search engine', 'Social media', 'Word of mouth'] %>
                 
                 </div>
             </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Close</button>
-                    <%= f.submit(class:"btn btn-success") %>
+                    <%= f.submit('Subscribe!', class:"btn btn-success") %>
                 </div>
             <% end%>
 </div>

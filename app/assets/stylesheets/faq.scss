@@ -3,9 +3,11 @@
 #faq {
     background-image: url('waterfall.jpg');
     height: fit-content;
+    min-height: 90%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    //height: 90%;
 }
 
 #faq-nav-logo{

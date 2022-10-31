@@ -1,12 +1,13 @@
 @import './color_palette.scss';
 
+
 .nav-menu-logo{
     z-index: 3;
     top: 25%;
     left: 250px;
     align-self: center;
     border-left: 2px solid black;
-    font-size: 1.5em;
+    font-size: 1.5rem;
     overflow: hidden;
     white-space: nowrap;
     .nav-link{
@@ -46,8 +47,23 @@
     }
     
     @media (max-width: 1000px) {
+        height: 120px;
+        font-size: 1rem;
         .auto_hide:active {
             width: 120px;
         }
+    }
+}
+
+
+.logo_img{
+    width: 250px; 
+    background-color:  $dark-green-x-11;
+    height: 250px;
+    object-fit: contain;
+    padding:10%;
+    @media (max-width: 1000px){
+        width: 120px;
+        height: 120px;
     }
 }

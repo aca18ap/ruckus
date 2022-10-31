@@ -22,35 +22,30 @@
         </div>
     </div>
         <div class="page-container" id="1">
-            <%= image_tag('about/abt1.jpg', width: '100%', class: "background_image z-0") %>
-            <div class="row content">
-                <div class="col-lg-5 col-sm-12 transparent-background">
-                    <div class="h-100 content-wrapper align-items-center">
-                        <div class="content-body text-center">
-                            <h1>About us</h1>
-                            <br>
-                            <p>Based in Sheffield, UK, Ruckus Peak aims to provide vintage adult clothing from quality brands. Inspired by the greenery of our city and the surrounding Peak District, we input this into our brand and our products. Putting our upmost attention into the quality and sustainability of our products, Ruckus Peak offers quality clothing for hikers, climbers and outwear enthusiasts.</p>
-                        </div>
+            <%= image_tag('about/abt1.jpg', width: '100%', class: "background_image", id: "abt1") %>
+            <div class="row content g-0">
+                <div class="col-lg-4 offset-lg-4  d-flex align-items-end mobile_invisible">
+                    <div class="content-body mobile_invisible">
+                        <a class="nav-icon py-5" href="#2">
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-sm-0 content-wrapper">
-           
-                </div>
-                <div class="col-lg-4 col-sm-12 content-wrapper d-flex align-items-end">
-                    <div class="content-body">
-                       <a class="nav-icon py-5" href="#2">
-                        <i class="fa-solid fa-chevron-down"></i>
-                    </a>
+                <div class="col-lg-4 col-sm-12 py-5 order-lg-first content-wrapper transparent-background">
+                    <div class="content-body text-center">
+                        <h1>About us</h1>
+                        <br>
+                        <p>Based in Sheffield, UK, Ruckus Peak aims to provide vintage adult clothing from quality brands. Inspired by the greenery of our city and the surrounding Peak District, we input this into our brand and our products. Putting our upmost attention into the quality and sustainability of our products, Ruckus Peak offers quality clothing for hikers, climbers and outwear enthusiasts.</p>
                     </div>
                 </div>
             </div>
         </div>
         <div class="page-container" id="2">
 
-            <%= image_tag('about/slav.jpg', width: '100%', class: "background_image") %>
+            <%= image_tag('about/slav.jpg', width: '100%', class: "background_image", id: "abt2") %>
             <div class="row content g-0">
-                <div class="col-lg-5 content-wrapper py-5">
-                    <div class="d-flex flex-wrap align-content-between h-100">
+                <div class="col-lg-5 col-sm-12 py-5 mobile_invisible">
+                    <div class="h-100 d-flex flex-wrap align-content-between">
                         <div class="d-flex w-100 justify-content-center">
                             <a class="nav-icon text-center" href="#1">
                                 <i class="fa-solid fa-chevron-up"></i>
@@ -63,10 +58,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 content-wrapper">
-           
-                </div>
-                <div class="col-lg-4 content-wrapper transparent-background">
+
+                <div class="col-lg-4 offset-lg-3 col-sm-12 content-wrapper transparent-background h-100">
                      <div class="content-body text-center">
                         <h1>How we do things</h1>
                         <br>
@@ -81,29 +74,27 @@
         </div>
         <div class="page-container" id="3">
             <%= image_tag('about/walking_zoom.jpg', width: '100%', class: "background_image") %>
-            <div class="row content">
-                <div class="col-lg-4 transparent-background">
-                    <div class="h-100 content-wrapper">
-                        <div class="content-body text-center">
-                            <h1>What we sell</h1>
-                            <br>
-                            <br>
-                            <p>We supply second handed branded clothes, subjected to thorough quality checks and cleaning processes. Our primary focus is providing the resources and the abilities to give old items a new lease of life. Primary brands included within the Ruckus Peak store will include known brands such as The North Face, Berghaus, RAB and many more.</p>
-                        </div>
+            <div class="row content g-0">
+                <div class="col-lg-4  col-sm-12 mobile_invisible">
+
+                </div>
+                <div class="col-lg-4 col-sm-12 order-lg-first content-wrapper transparent-background">
+                    <div class="content-body text-center">
+                        <h1>What we sell</h1>
+                        <br>
+                        <br>
+                        <p>We supply second handed branded clothes, subjected to thorough quality checks and cleaning processes. Our primary focus is providing the resources and the abilities to give old items a new lease of life. Primary brands included within the Ruckus Peak store will include known brands such as The North Face, Berghaus, RAB and many more.</p>
                     </div>
                 </div>
-                <div class="col-lg-4 content-wrapper">
-           
-                </div>
-                <div class="col-lg-4 content-wrapper p-5">
-                    <div class="d-flex flex-wrap align-content-between h-100">
-                        <div class="w-100 content-body">
+                <div class="col-lg-4 col-sm-0 content-wrapper p-5">
+                    <div class="d-flex flex-wrap align-content-between h-100 mobile_invisible">
+                        <div class="w-100 content-body mobile_invisible">
                             <a class="nav-icon text-center w-100" href="#2">
                                 <i class="fa-solid fa-chevron-up"></i>
                             </a>
                         </div>
                         
-                        <div class="w-100 content-body">
+                        <div class="w-100 content-body mobile_invisible">
                             <a class="nav-icon text-center w-100" href="#4">
                                 <i class="fa-solid fa-chevron-down"></i>
                             </a>
@@ -131,7 +122,7 @@
 
              </div>
         </div>
-    
+    <div>
 </div>
 
 <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>

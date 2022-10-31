@@ -29,6 +29,11 @@ p{
     font-size: x-large;
     margin: 0;
     padding: 0;
+
+
+    @media(max-width: 1000px){
+
+    }
 }
 
 .content-wrapper{
@@ -36,6 +41,9 @@ p{
     justify-content: center;
     align-items: center;
     height: 100%;
+    @media(max-width: 1000px){
+        bottom: 250px;
+    }
 }
 
 .transparent-background{
@@ -52,20 +60,26 @@ p{
     padding-right: 10%;
 
     h1{
-        font-size: 3.5em;
+        font-size: 3.5rem;
         padding-bottom: 0%;
     }
 
     p{
-        font-size: 1.375em;
+        font-size: 1.375rem;
     }
 }
 
 .background_image{
     height: 100%;
     width: 100%;
-    object-fit: cover;
     top: 0;
+    object-fit: cover;
+}
+#abt1{
+    object-position: 80%;
+}
+#abt2{
+    object-position: left;
 }
 
 .page-container{
@@ -78,38 +92,7 @@ p{
 }
 
 
-::-webkit-scrollbar{
-    height: 6px;
-    padding-right: 20px;
-}
 
-/* Track */
-::-webkit-scrollbar-track {
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.012);
-
-  }
-
-::-webkit-scrollbar-track:hover {
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.121);
-
-  }
-  
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background: rgba(0,0,0,0.2);
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover{
-    background: rgba(0,0,0,0.4);
-  }
-
-::-webkit-scrollbar-thumb:active{
-    background: rgba(0,0,0,.9);
-}
 
 
 
@@ -129,6 +112,8 @@ p{
     overflow: hidden;
     pointer-events: all;
     z-index: 1;
+
+
 }
 
 
@@ -140,13 +125,7 @@ p{
     width: auto;
 }
 
-.logo_img{
-    width: 250px; 
-    background-color:  $dark-green-x-11;
-    height: 250px;
-    object-fit: contain;
-    padding:10%;
-}
+
 
 #logo_img{
 
@@ -207,4 +186,12 @@ p{
     transform: scale(1.5);
     transition: 0.2s ease-in-out;
 }
+
+.mobile_invisible{
+    @media(max-width: 1000px){
+        display: none !important;
+        height: 0px;
+    }
+}
+
 
