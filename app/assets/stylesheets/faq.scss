@@ -1,34 +1,46 @@
+@import './color_palette.scss';
+
 #faq {
     background-image: url('waterfall.jpg');
-    height: calc(100vh - 250px);
+    height: fit-content;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-#faq-logo{
-    top: 10%;
-    left: 80%;
-    #nav-menu-logo{
-        width: 300px;
-        right: 250px;
-        border-left: 0px;
-        border-right: 2px solid black;
-    }
+#faq-nav-logo{
+
+        border-left: 0px !important;
+        border-right: 2px solid black !important; 
+    
 }
 
 .accordion{
     margin: 10%;
-    background-color: black;
     p{
+        color: $black-chocolate;
         padding-top: 2%;
     }
 
 }
 
-.accordion-body{
+.accordion-item{
+    border-radius: 0px !important;
+    border: none;
+    //border-top-right-radius: 0px !important;
+    .accordion-header{
+        background-color: $beau-blue;
+       }
+    .accordion-button:not(.collapsed){
+        box-shadow: none;
+        color: $army-green;
+    }
+
+    .accordion-body{
+        background-color: $beau-blue;
+    }
 }
 
-.accordion-button{
-    background-color: var(--green);
+.accordion-item:first-of-type{
+
 }

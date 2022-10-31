@@ -1,5 +1,6 @@
+@import './color_palette.scss';
 footer{
-    background-color: var(--green);
+    background-color:  $dark-green-x-11;
     width: 100%;
     padding-top: 2%;
 
@@ -24,4 +25,15 @@ footer{
 
     }
 
+    #sign_up_footer{
+        input, button{
+            color: $beau-blue;
+            background: rgba(black, 0.3);
+            border: none;
+            border-radius: 0px;
+            height: 30px;
+            font-family: 'BebasNeue';
+            width: fit-content;
+        }
+    }
 }

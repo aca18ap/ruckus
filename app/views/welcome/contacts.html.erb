@@ -1,41 +1,20 @@
-<div class="d-flex w-100 logo-overlay" id="contacts-logo">
-    <a href="/"><img src="ruckus_logo.png" class="logo_img"></a>
-    <ul class="nav flex-column" id="nav-menu-logo">
-        <li class="nav-item">
-            <%= link_to 'About us', about_path, :class=>'nav-link' %>
-        </li>
-        <li class="nav-item">
-            <%= link_to 'FAQs', faq_path, :class=>'nav-link' %>
-        </li>
-        <li class="nav-item">
-            <%= link_to 'Contacts', contacts_path, :class=>'nav-link' %>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link disabled" href="#">Products</a>
-        </li>
-    </ul>
-</div>
 <div class="container-fluid " id="contacts">
-    <div class="content-wrapper-contacts row">
-        <h1 id="page-title">Contacts</h1>
+    <div class="content-wrapper-contacts row h-100">
        
-        <div class="col-4 d-flex align-items-center justify-content-end">
-            <div class="content-body">
-                
-            </div>
+        <div class="col-lg-4 col-sm-12 d-flex align-items-start p-5 ">
+            <%= render partial: 'welcome/logo_nav' %>
         </div>
-        <div class="col-2"></div>
-        <div class="col-6 d-flex align-items-center transparent-background">
+        <div class="col-lg-6 col-sm-12 offset-lg-2 d-flex align-items-center transparent-background h-100">
             <div class="content-body-contacts">
-            <br>
-            <br>
+                
+                <h1 id="page-title">Contacts</h1>
                 <li class="social-link twitter"><a href="http://twitter.com">
                     <i class="fa-brands fa-twitter"> @RUCKUSPEAK</i>
                 </a></li>
                 <li class="social-link facebook"><a href="http://facebook.com">
                     <i class="fa-brands fa-facebook"> @RUCKUSPEAK</i>
                 </a></li>
-                <li class="social-link instagram"><a href="http://instagram.com">
+                <li class="social-link instagram"><a href="http://instagram.com/ruckuspeak_clothing">
                     <i class="fa-brands fa-instagram"> @RUCKUSPEAK</i>
                 </a></li>
                 <li class="social-link email"><a href="mailto:ruckuspeak@gmail.com">

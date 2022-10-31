@@ -1,35 +1,45 @@
+@import './color_palette';
 
 #contacts {
     background-image: url('winter.jpg');
-    height: 100%;
+    //height: fit-content;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    @media (min-width: 1000px){
+        height: 90%;
+    }
 }
 
-.logo-overlay{
-    position: absolute;
-    width: 33%px;
-}
 
 #contacts-logo{
     top: 5%;
     left: 5%;
-    #nav-menu-logo{
-        width: 300px;
+    z-index: 300;
+
+    .nav-item{
+        width: 120px;
+    }
+    a{
+        color: $beau-blue;
+        transition: all 0.2s ease-in-out;
+    }
+    a.nav-link:hover{
+        transform: scale(1.25);
+        color: $pewter-blue;
     }
 }
 
 .content-wrapper-contacts{
-    height: 100%;
+    height: fit-content;
+
 }
 
+
+
 #page-title{
-    position:absolute;
-    left: 65%;
-    top: 50px;
-    font-size: 6em;
-    color: var(--green);
+    font-size: 4em;
+    //color: var(--green);
 }
 
 .content-body-contacts{
@@ -38,12 +48,12 @@
     align-items: start;
     width: 80%;
     padding: 30px;
-    color: white;
+    color: $beau-blue;
     z-index: 2;
     li{
         margin: 10px 0;
         a{
-            color: white;
+            color: $beau-blue;
             font-size: 1.75em;
             transition: all 0.1s ease 0.1s;
             -webkit-text-stroke: 1.5px black;
@@ -57,7 +67,7 @@
     }      
     li.tiktok:hover{
         a{
-            color: cyan;
+            color: $beau-blue;
             text-shadow: 10px 10px magenta;
             
         }
@@ -71,7 +81,7 @@
     }    
     li.email:hover{
         a{
-            color: white;
+            color: $beau-blue;
             text-shadow: 0px 12px red;
         }
     }

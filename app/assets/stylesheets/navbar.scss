@@ -1,4 +1,53 @@
-nav {
-    box-shadow: 0px 16px 10px black;
-    background-color: orange;
+@import './color_palette.scss';
+
+.nav-menu-logo{
+    z-index: 3;
+    top: 25%;
+    left: 250px;
+    align-self: center;
+    border-left: 2px solid black;
+    font-size: 1.5em;
+    overflow: hidden;
+    white-space: nowrap;
+    .nav-link{
+        color:  $beau-blue;
+        transition: all 0.1s ease-in-out 0.1s;
+        
+    }
+    
+    .nav-link:hover{
+        color:  $pewter-blue;
+        font-size: 1.75rem;
+        transition: all 0.1s ease-in-out 0.1s;
+    }
+
+
+
+    .nav-item{
+        //width: 0px;
+        text-overflow: ellipsis;
+        transition: all 0.1s ease-in-out 0.1s;
+
+    }
+
+    a{
+        text-overflow: ellipsis;
+    }
+    .nav-item:hover{
+        //width: 100px;
+        transition: all 0.2s ease-out 0.1s;
+    }
+
+    .auto_hide{
+        width: 0px;
+    }
+    .auto_hide:hover{
+        width: 120px;
+    }
+    
+    @media (max-width: 1000px) {
+        .auto_hide:active {
+            width: 120px;
+        }
+    }
 }
